@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <canvas :id="id" class="w-full h-[400px] mt-[39px]" />
+        <canvas :id="id" class="w-full max-h-[269px] mt-[39px]" />
     </div>
 </template>
 
@@ -94,7 +94,8 @@ export default defineComponent({
                             data: props.data,
                             backgroundColor: props.backgroundColor,
                             borderColor: props.borderColor,
-                            borderWidth: 1,
+                            borderWidth: 2,
+                            tension: 0.5,
                         },
                     ],
                 },
@@ -110,6 +111,13 @@ export default defineComponent({
                         x: {
                             grid: {
                                 display: false,
+                            },
+                        },
+
+                        y: {
+                            ticks: {
+                                autoSkip: true,
+                                maxTicksLimit: 6,
                             },
                         },
                     },
