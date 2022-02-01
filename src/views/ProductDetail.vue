@@ -134,7 +134,7 @@
                             </div>
                         </div>
 
-                        <div class="mx-auto">
+                        <div class="ml-auto">
                             <span class="py-[4px] rounded-full px-[12px] bg-brand-alt-100 text-brand-alt-500 font-700 text-[14px] leading-[16px]">
                                 Dana Kelolaan
                             </span>
@@ -157,9 +157,98 @@
                         </div>
                     </div>
 
-                    <div class="mt-[20px] bg-white px-[32px] py-[24px]"></div>
-                    
-                    <div class="mt-[20px] bg-white px-[32px] py-[24px]"></div>
+                    <div class="mt-[20px] bg-white px-[32px] py-[24px]">
+                        <InvesNowChart
+                            title="Performa NAV"
+                            subtitle="Per 16 Nov 2021"
+                            label="Number of NAV"
+                            :labels="[`Jun 20'`, 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', `Jun '21`]"
+                            :data="[1000, 2900, 2700, 2000, 3600, 6000, 6800, 6400, 7700, 8600, 7800, 5800, 6100]"
+                            background-color="rgba(238, 80, 63, 0.20)"
+                            border-color="rgba(238, 80, 63, 1)"
+                        />
+
+                        <div class="w-full flex rounded-lg mt-[18px]">
+                            <div class="bg-gray-100 text-center w-full rounded-l-lg py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">1D</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">3M</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">YTD</p>
+                            </div>
+
+                            <div class="bg-brand-500 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-white">1Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">3Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">5Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">10Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full rounded-r-lg py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">All</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[20px] bg-white px-[32px] py-[24px]">
+                        <InvesNowChart
+                            title="Pertumbuhan Dana Kelolaan"
+                            insert-title="(dalam satuan miliar)"
+                            subtitle="Per 16 Nov 2021"
+                            label="Number of AUM"
+                            :labels="[`Jun 20'`, 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', `Jun '21`]"
+                            :data="[1000, 2900, 2700, 2000, 3600, 6000, 6800, 6400, 7700, 8600, 7800, 5800, 6100]"
+                            background-color="rgba(92, 13, 171, 0.20)"
+                            border-color="rgba(92, 13, 171, 1)"
+                        />
+
+                        <div class="w-full flex rounded-lg mt-[18px]">
+                            <div class="bg-gray-100 text-center w-full rounded-l-lg py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">1D</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">3M</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">YTD</p>
+                            </div>
+
+                            <div class="bg-brand-alt-500 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-white">1Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">3Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">5Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">10Y</p>
+                            </div>
+
+                            <div class="bg-gray-100 text-center w-full rounded-r-lg py-[7px] cursor-pointer">
+                                <p class="font-700 text-[9px] leading-[10px] text-gray-500">All</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="bg-blue-100 w-full flex mt-[20px] rounded-lg border-[1px] border-blue-300 p-[24px]">
                         <InvesNowIcon icon="ic-information" width="20px" height="20px" class="mt-[4px]" />
@@ -182,6 +271,7 @@ import { defineComponent } from "vue";
 import NavbarDetail from "@/components/navbars/NavbarDetail.vue";
 import InvesNowButton from "@/components/common/InvesNowButton.vue";
 import InvesNowIcon from "@/components/common/InvesNowIcon.vue";
+import InvesNowChart from "@/components/common/InvesNowChart.vue";
 import FooterDefault from "@/components/footers/FooterDefault.vue";
 
 export default defineComponent({
@@ -192,6 +282,7 @@ export default defineComponent({
         InvesNowButton,
         FooterDefault,
         InvesNowIcon,
+        InvesNowChart,
     },
 });
 </script>
