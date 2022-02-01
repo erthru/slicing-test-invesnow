@@ -10,6 +10,5 @@ body {
     background-color: white;
     font-family: "Alegreya Sans", sans-serif;
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;
 }
 </style>

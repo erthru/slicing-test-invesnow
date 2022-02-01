@@ -8,6 +8,7 @@ export default {
                     800: "#5E1108",
                 },
                 "brand-alt": {
+                    100: "#EBD9FC",
                     200: "#D6B3F9",
                     500: "#5C0DAB",
                     600: "#3F0975",
@@ -16,6 +17,7 @@ export default {
                     900: "#1F0439",
                 },
                 accent: {
+                    300: "#FFE299",
                     500: "#FFCE51",
                 },
             },

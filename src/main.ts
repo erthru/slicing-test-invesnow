@@ -3,7 +3,7 @@ import App from "./App.vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import "windi.css";
 import Home from "@/views/Home.vue";
-import Detail from "@/views/Detail.vue";
+import ProductDetail from "@/views/ProductDetail.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: "/product-detail",
-        component: Detail,
+        component: ProductDetail,
     },
 ];
 
