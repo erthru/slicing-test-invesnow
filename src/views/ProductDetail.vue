@@ -45,7 +45,9 @@
                             <p class="font-700 text-[16px] leading-[24px] ml-auto text-gray-800">Bank CIMB Niaga TBK, PT</p>
                         </div>
 
-                        <InvesNowButton class="bg-accent-500 text-black w-full mt-[32px] h-[52px]">Beli</InvesNowButton>
+                        <InvesNowButton class="bg-accent-500 text-black w-full mt-[32px] h-[52px]" @click="state.isBuyModalShown = true"
+                            >Beli</InvesNowButton
+                        >
                     </div>
 
                     <div class="bg-white p-[20px] mt-[20px]">
@@ -263,15 +265,41 @@
         </div>
 
         <FooterDefault class="mt-[64px]" />
+
+        <InvesNowModal v-model="state.isBuyModalShown">
+            <p class="font-400 text-[16px] leading-[24px] text-gray-900">
+                Profil Resiko Anda lebih rendah dibandingkan karakteristik resiko Reksa Dana ini.
+            </p>
+
+            <div class="flex w-full mt-[22px]">
+                <input type="checkbox" class="mt-[4px]" />
+
+                <p class="font-400 text-[16px] leading-[24px] text-gray-800 ml-[12px]">
+                    Saya telah membaca, memahami, dan menyetujui seluruh isi <RouterLink to="#" class="text-brand-500">Prospektus</RouterLink> dan
+                    memahami resiko investasi Reksa Dana yang saya pilih
+                </p>
+            </div>
+
+            <div class="flex w-full mt-[22px] space-x-[12px]">
+                <InvesNowButton class="bg-accent-500 text-brand-alt-800 w-full h-[52px]">Beli</InvesNowButton>
+                
+                <InvesNowButton
+                    class="bg-white text-brand-alt-600 border-[1px] border-brand-alt-600 w-full h-[52px]"
+                    @click="state.isBuyModalShown = false"
+                    >Nanti Saja</InvesNowButton
+                >
+            </div>
+        </InvesNowModal>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 import NavbarDetail from "@/components/navbars/NavbarDetail.vue";
 import InvesNowButton from "@/components/common/InvesNowButton.vue";
 import InvesNowIcon from "@/components/common/InvesNowIcon.vue";
 import InvesNowChart from "@/components/common/InvesNowChart.vue";
+import InvesNowModal from "@/components/common/InvesNowModal.vue";
 import FooterDefault from "@/components/footers/FooterDefault.vue";
 
 export default defineComponent({
@@ -283,6 +311,15 @@ export default defineComponent({
         FooterDefault,
         InvesNowIcon,
         InvesNowChart,
+        InvesNowModal,
+    },
+
+    setup() {
+        const state = reactive({
+            isBuyModalShown: false,
+        });
+
+        return { state };
     },
 });
 </script>

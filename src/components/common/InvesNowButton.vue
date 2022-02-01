@@ -1,5 +1,5 @@
 <template>
-    <button :class="`py-[8px] px-[16px] font-700 ${isCircle ? 'rounded-full' : 'rounded-lg'}`">
+    <button :class="`py-[8px] px-[16px] font-700 ${isCircle ? 'rounded-full' : 'rounded-lg'}`" @click="onClick">
         <slot />
     </button>
 </template>
@@ -13,6 +13,16 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
+    },
+
+    setup(_, context) {
+        const onClick = () => {
+            context.emit("click");
+        };
+
+        return {
+            onClick,
+        };
     },
 });
 </script>
